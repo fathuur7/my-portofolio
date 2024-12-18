@@ -4,17 +4,15 @@ import { ChevronDown, Send, Code, ArrowUpRight } from 'lucide-react'
 import { Suspense } from 'react'
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls } from '@react-three/drei'
-import { SimpleModel } from './components/SimpleModel'
+import { SimpleModel , BallBounce } from './components/SimpleModel'
 // import { HumanModel } from './components/HumanModel' // Import the new HumanModel
 
 export default function Portfolio() {
   const projects = [
-    { name: "Web Design", description: "Innovative UI/UX solutions", tech: ["React", "Tailwind", "Framer Motion"] },
-    { name: "AI Platform", description: "Machine learning web application", tech: ["Next.js", "TypeScript", "OpenAI"] },
-    { name: "E-Commerce", description: "Full-stack shopping experience", tech: ["Node.js", "MongoDB", "Stripe"] },
-    { name: "Data Visualization", description: "Interactive dashboard", tech: ["D3.js", "React", "Chart.js"] },
-    { name: "Mobile App", description: "Cross-platform mobile solution", tech: ["React Native", "Firebase", "GraphQL"] },
-    { name: "Blockchain App", description: "Decentralized application", tech: ["Solidity", "Web3.js", "Ethereum"] }
+    { name: "Web Design", description: "Innovative UI/UX solutions", tech: ["React", "Tailwind", "Framer Motion"] , githublink: "https://github.com/your-repo-link"},
+    { name: "REST API", description: "Machine learning web application", tech: ["JAVASCRIPT", "Express.js","MongoDB", "Node"],  githublink: "https://github.com/fathuur7/API_JS-USER"},
+    { name: "E-Commerce", description: "Full-stack shopping experience", tech: ["PHP", "MYSQL"] , githublink: "https://github.com/fathuur7/paw" },
+  
   ];
 
   return (
@@ -53,6 +51,7 @@ export default function Portfolio() {
                 <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
                 <pointLight position={[-10, -10, -10]} />
                 <Suspense fallback={null}>
+                  <BallBounce />
                   <SimpleModel />
                 </Suspense>
                 <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1} />
@@ -62,9 +61,9 @@ export default function Portfolio() {
         </div>
       </section>
 
-
- {/* Projects Section */}
- <section id="projects" className="py-24 bg-gray-50">
+    
+    {/* Projects Section */}
+      <section id="projects" className="py-24 bg-gray-50">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900">
             Featured Projects
@@ -73,7 +72,7 @@ export default function Portfolio() {
             {projects.map((project, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-all duration-300 hover:-translate-y-2 hover:shadow-xl"
+                className="bg-white rounded-xl shadow-lg overflow-hidden transform transition-transform duration-300 hover:scale-105"
               >
                 <div className="p-6">
                   <div className="flex items-center mb-4">
@@ -91,13 +90,18 @@ export default function Portfolio() {
                       </span>
                     ))}
                   </div>
+                  <div className="flex gap-2 mt-4">
+                    <a href={project.githublink} className="text-indigo-600 hover:underline">
+                      Github
+                    </a>
+                  </div>
                 </div>
               </div>
             ))}
           </div>
         </div>
       </section>
-
+      
       {/* Contact Section */}
       <section id="contact" className="py-24 bg-gradient-to-br from-indigo-600 to-purple-600 text-white">
         <div className="container mx-auto px-4 max-w-xl text-center">
@@ -106,7 +110,7 @@ export default function Portfolio() {
             Interested in collaborating or have a project in mind? I'm always open to exciting opportunities.
           </p>
           <a 
-            href="mailto:contact@alexmorgan.dev" 
+            href="mailto:kopisusu8ip@gmail.com" 
             className="px-8 py-4 bg-white text-indigo-600 rounded-lg hover:bg-gray-100 transition-colors text-lg font-semibold inline-flex items-center gap-3"
           >
             <Send className="w-6 h-6" /> Send me an Email

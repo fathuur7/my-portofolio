@@ -2,7 +2,6 @@
 
 import { useRef } from 'react'
 import { useFrame } from '@react-three/fiber'
-import { useGLTF } from '@react-three/drei'
 import * as THREE from 'three'
 
 export function SimpleModel(props: JSX.IntrinsicElements['mesh']) {

@@ -11,6 +11,10 @@ import { useRef } from 'react';
 import { useScroll } from 'framer-motion';
 // import { useInView } from 'react-intersection-observer';
 import { useTransform } from 'framer-motion';
+import AboutMe from './components/AboutMe';
+import Skills from './components/Skills';
+import Timeline from './components/Timeline';
+
 interface Project {
   name: string
   description: string
@@ -80,6 +84,10 @@ export default function Portfolio() {
       <main className="flex-grow relative z-10">
         <Hero />
 
+        <AboutMe />
+
+        <Skills />
+
         <section id="projects" className="py-24">
           <div className="container mx-auto px-4 max-w-6xl">
             <motion.h2
@@ -97,6 +105,8 @@ export default function Portfolio() {
             </div>
           </div>
         </section>
+
+        <Timeline />
       </main>
 
       <Footer />

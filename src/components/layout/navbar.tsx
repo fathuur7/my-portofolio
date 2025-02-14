@@ -41,10 +41,10 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
-        <a href="/" className="flex items-center gap-2">
-          <motion.img 
-            src="/cat.jpeg" 
-            alt="Logo" 
+        <a href="#home" className="flex items-center gap-2">
+          <motion.img
+            src="/cat.jpeg"
+            alt="Logo"
             className="w-10 h-10 rounded-full shadow-lg"
             whileHover={{ scale: 1.1 }}
           />
@@ -69,11 +69,12 @@ const Navbar = () => {
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <motion.button 
-            whileTap={{ scale: 0.95 }} 
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? <X size={28} className="text-gray-900" /> : <Menu size={28} className="text-gray-900" />}
+          <motion.button whileTap={{ scale: 0.95 }} onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
+            {isMobileMenuOpen ? (
+              <X size={28} className="text-gray-900" />
+            ) : (
+              <Menu size={28} className="text-gray-900" />
+            )}
           </motion.button>
         </div>
       </div>
@@ -105,3 +106,4 @@ const Navbar = () => {
 }
 
 export default Navbar
+

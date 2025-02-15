@@ -57,7 +57,7 @@ const projects: Project[] = [
       "A personal portfolio website showcasing skills, projects, and contact information, built with React and Framer Motion for a smooth user experience.",
     tech: ["React", "Framer Motion", "JavaScript", "CSS"],
     githublink: "https://github.com/fathuur7/my-portofolio",
-    livelink: "https://fathuur7.github.io/portfolio/",
+    livelink: "https://my-portofolio-iota-five.vercel.app/",
     image: "./Portofolio.png",
   },
 

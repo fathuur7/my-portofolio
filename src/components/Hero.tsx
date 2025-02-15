@@ -19,7 +19,7 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-white overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-100 to-white overflow-hidden">
       <div className="container mx-auto px-4 max-w-6xl">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <motion.div
@@ -31,12 +31,12 @@ const Hero = () => {
             <motion.div className="mb-6 relative w-40 h-40 mx-auto md:mx-0" variants={fadeInUp}>
               <img
                 src="/cat.jpeg"
-                alt="John Doe"
+                alt="@#"
                 className="w-full h-full object-cover object-center rounded-full shadow-lg"
               />
             </motion.div>
             <motion.h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 text-gray-900" variants={fadeInUp}>
-              John Doe
+              <motion.span className="text-indigo-600">Hi, I&apos;m</motion.span> Nur Fathur Rachman
             </motion.h1>
             <motion.p className="text-xl sm:text-2xl font-semibold text-indigo-600 mb-4" variants={fadeInUp}>
               Full-Stack Developer | UI/UX Enthusiast

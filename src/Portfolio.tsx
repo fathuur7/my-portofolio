@@ -26,13 +26,12 @@ interface Project {
 
 const projects: Project[] = [
   {
-    name: "Web Design",
+    name: "Music Bot",
     description:
-      "Innovative UI/UX solutions for modern web applications, focusing on user-centric design principles and responsive layouts.",
-    tech: ["HTML", "JavaScript", "Tailwind CSS", "Framer Motion"],
-    githublink: "https://github.com/your-repo-link",
-    livelink: "https://your-live-demo-link.com",
-    image: "/placeholder.svg?height=300&width=400",
+      "A versatile Telegram bot that allows users to search for and download music, offering seamless performance and user-friendly interactions.",
+    tech: ["JavaScript", "Node.js", "Telegram API", "FFmpeg"],
+    githublink: "https://github.com/fathuur7/tele",
+    image: "./teleBot.png"
   },
   {
     name: "REST API",
@@ -40,17 +39,38 @@ const projects: Project[] = [
       "Robust backend API for a machine learning web application, featuring secure authentication and efficient data processing.",
     tech: ["JavaScript", "Express.js", "MongoDB", "Node.js"],
     githublink: "https://github.com/fathuur7/API_JS-USER",
-    image: "/placeholder.svg?height=300&width=400",
+    image: "./Restapi.png",
   },
   {
-    name: "E-Commerce",
+    name: "Weather App Surabaya",
     description:
-      "Full-stack shopping experience with secure payment integration, inventory management, and responsive design for mobile and desktop.",
-    tech: ["PHP", "MySQL", "Bootstrap", "jQuery"],
-    githublink: "https://github.com/fathuur7/paw",
-    livelink: "https://your-ecommerce-demo.com",
-    image: "/placeholder.svg?height=300&width=400",
+      "A weather application built with React, Tailwind CSS, and Framer Motion, featuring real-time weather data and location-based features.",
+    tech: ["React", "Tailwind CSS", "Framer Motion", "JavaScript"],
+    githublink: "https://github.com/fathuur7/weather",
+    livelink: "https://weatherfinal-one.vercel.app/",
+    image: "./Weather.png",
   },
+
+  {
+    name: "Portfolio",
+    description:
+      "A personal portfolio website showcasing skills, projects, and contact information, built with React and Framer Motion for a smooth user experience.",
+    tech: ["React", "Framer Motion", "JavaScript", "CSS"],
+    githublink: "https://github.com/fathuur7/my-portofolio",
+    livelink: "https://fathuur7.github.io/portfolio/",
+    image: "./Portofolio.png",
+  },
+
+  {
+    name :"Rent Aps-boy/girl-friend (Upcoming)",
+    description:"This application is used to find friends to hang out, eat, watch movies, etc. This application was built using React Native, Node.js, Express.js, and MongoDB.",
+    tech: ["Node.js", "Express.js", "MongoDB" , "TypeScript", "Tailwind CSS"
+      ,"Monggose" , "JavaScript" , "Next"
+    ],
+    githublink: "https://github.com/fathuur7/rent-a-friend",
+    livelink: "https://rent-a-friend.vercel.app/",
+    image: "./Rent.png",
+  }
 ]
 
 export default function Portfolio() {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { 
   Send, 
@@ -7,8 +7,6 @@ import {
   Mail, 
   Copy, 
   Check,
-  Linkedin,
-  Twitter,
   Phone
 } from 'lucide-react';
 
@@ -20,10 +18,9 @@ export default function Footer() {
 
   // Social links data
   const socialLinks = [
-    { icon: Github, link: 'https://github.com/yourusername', label: 'GitHub' },
-    { icon: Instagram, link: 'https://instagram.com/yourusername', label: 'Instagram' },
-    { icon: Linkedin, link: 'https://linkedin.com/in/yourusername', label: 'LinkedIn' },
-    { icon: Twitter, link: 'https://twitter.com/yourusername', label: 'Twitter' },
+    { icon: Github, link: 'https://github.com/fathuur7/fathuur7', label: 'GitHub' },
+    { icon: Instagram, link: 'https://instagram.com/fatur_.ft', label: 'Instagram' },
+    { icon: Send, link: 'https://t.me/@Yourboy8w?text=haiii', label: 'Telegram' },
   ];
   
   // Typing effect
@@ -57,6 +54,7 @@ export default function Footer() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       className="relative py-24 overflow-hidden"
+      id='contact'
     >
       {/* Enhanced Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-600 via-purple-600 to-pink-500" />
@@ -109,7 +107,7 @@ export default function Footer() {
           initial={{ y: 20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3 }}
-          className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-12"
+          className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-12"
         >
           {socialLinks.map((social, index) => (
             <motion.a

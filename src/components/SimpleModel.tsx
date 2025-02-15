@@ -7,7 +7,7 @@ import * as THREE from 'three'
 export function SimpleModel(props: JSX.IntrinsicElements['mesh']) {
   const meshRef = useRef<THREE.Mesh>(null!)
   
-  useFrame((state, delta) => {
+  useFrame((_ , delta : number)  => {
     meshRef.current.rotation.x += delta * 2
     meshRef.current.rotation.y += delta * 1
   })
